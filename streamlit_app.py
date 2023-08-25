@@ -105,7 +105,9 @@ if st.button("Analysis "):
         cleaned_input = re.sub(r'\w*\d\w*', '', cleaned_input)  # Menghapus angka
 
         # Langkah 2: Case Folding
-        cleaned_input = cleaned_input.lower()
+        case_folded_input = cleaned_input.lower()
+
+        preprocessed_steps.append("2. Case Folding: " + case_folded_input)
 
         # Langkah 3: Tokenisasi
         sample_words = word_tokenize(case_folded_input)
