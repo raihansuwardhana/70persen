@@ -136,9 +136,10 @@ if st.button("Analysis "):
 
         # Melakukan analisis sentimen pada teks komentar media sosial
         sentiment = classifier.classify(extract_features(sample_words_no_stopwords))
+        st.write("Sentiment Analysis Results:", sentiment) 
         
         # Penjelasan mengapa teks terklasifikasikan sebagai sentimen positif atau negatif
-        if sentiment == 'Sentiment Positive':
+        if sentiment == 'Sentimen Positif':
             st.write("Text classified as POSITIVE sentiment.")
             st.write("This may be due to the use of positive words, positive expressions, or a good context.")
         else:
